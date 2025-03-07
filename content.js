@@ -1,7 +1,7 @@
 // 监听DOM变化确保版本历史表加载完成
 const observer = new MutationObserver(() => {
   const versionTable = document.querySelector('table[aria-label="Version History Table"]');
-  console.log(versionTable);
+  //console.log(versionTable);
   if (versionTable) {
     processVersionTable(versionTable);
     observer.disconnect();
@@ -23,7 +23,7 @@ function processVersionTable(table) {
   
   // 遍历表格行处理版本号
   table.querySelectorAll('tbody tr').forEach(row => {
-    console.log(row);
+    //console.log(row);
     const versionCell = row.querySelector('td:nth-child(1)');
     const version = versionCell?.textContent?.trim();
     
