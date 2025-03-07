@@ -1,0 +1,15 @@
+
+{
+  "manifest_version": 3,
+  "name": "VSIX Direct Download",
+  "version": "1.0",
+  "permissions": ["scripting"],
+  "host_permissions": ["*://marketplace.visualstudio.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://marketplace.visualstudio.com/items*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
